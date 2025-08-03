@@ -82,7 +82,7 @@ export const loginUser = async (req, res) => {
     // Send response
     res.json({
       success: true,
-      message: "Login successful",
+      message: "User login successfully",
       token,
       user: {
         id: user._id,
