@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
-
+import {toast} from 'react-toastify'
 const Login = () => {
   const { setToken } = useContext(AppContext);
   const [state, setState] = useState('Sign Up');
@@ -24,12 +24,18 @@ const Login = () => {
 
       if (data.success) {
         setToken(data.token); // Navbar re-renders automatically
+         if (state === 'Sign Up') {
+        toast.success(data.message);
+      } else {
+        toast.success(data.message);
+      }
         navigate('/');
       } else {
         alert(data.message);
       }
     } catch (error) {
       alert("Something went wrong");
+      toast.error("something went wrong")
     }
   };
 

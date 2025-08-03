@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import { LiaUserSolid } from 'react-icons/lia';
-
+import { toast } from 'react-toastify';
 const Navbar = () => {
   const { token, setToken } = useContext(AppContext);
   const navigate = useNavigate();
@@ -11,6 +11,7 @@ const Navbar = () => {
   const handleLogout = () => {
     setToken(null);
     navigate('/login');
+toast.success("user logout successfully")
   };
 
   return (
