@@ -18,7 +18,7 @@ const Login = () => {
     try {
       const url = state === 'Sign Up'
         ? 'http://localhost:4000/api/user/register'
-        : 'http://localhost:4000/user/login';
+        : 'http://localhost:4000/api/user/login';
 
       const { data } = await axios.post(url, { name, email, password });
 
