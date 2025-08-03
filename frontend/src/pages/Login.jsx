@@ -17,8 +17,8 @@ const Login = () => {
 
     try {
       const url = state === 'Sign Up'
-        ? 'https://frontend-5-ype2.onrender.com/api/user/register'
-        : 'https://frontend-5-ype2.onrender.com/user/login';
+        ? 'http://localhost:4000/api/user/register'
+        : 'http://localhost:4000/user/login';
 
       const { data } = await axios.post(url, { name, email, password });
 
