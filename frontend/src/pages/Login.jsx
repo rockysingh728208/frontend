@@ -17,8 +17,8 @@ const Login = () => {
 
     try {
       const url = state === 'Sign Up'
-        ? 'http://localhost:4000/api/user/register'
-        : 'http://localhost:4000/api/user/login';
+        ? 'https://frontend-wzvs.onrender.com/api/user/register'
+        : 'https://frontend-wzvs.onrender.com/user/login';
 
       const { data } = await axios.post(url, { name, email, password });
 
