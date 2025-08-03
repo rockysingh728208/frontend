@@ -17,8 +17,8 @@ const Login = () => {
 
     try {
       const url = state === 'Sign Up'
-        ? 'https://backendvidya.onrender.com/api/user/register'
-        : 'https://backendvidya.onrender.com/api/user/login';
+        ? 'https://backend-sagar.onrender.com/api/user/register'
+        : 'https://backend-sagar.onrender.com/api/user/login';
 
       const { data } = await axios.post(url, { name, email, password });
 
