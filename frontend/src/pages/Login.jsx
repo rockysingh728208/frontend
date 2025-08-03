@@ -17,8 +17,8 @@ const Login = () => {
 
     try {
       const url = state === 'Sign Up'
-        ? 'https://frontend-wzvs.onrender.com/api/user/register'
-        : 'https://frontend-wzvs.onrender.com/user/login';
+        ? 'https://frontend-4-0jyk.onrender.com/api/user/register'
+        : 'https://frontend-4-0jyk.onrender.com/user/login';
 
       const { data } = await axios.post(url, { name, email, password });
 
